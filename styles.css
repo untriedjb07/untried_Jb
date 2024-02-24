@@ -1,0 +1,494 @@
+/*
+Author: Jebril Mohammed
+Date:
+File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img, ul, figure, section, article, aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/* Style rules for body and images */
+body {
+    background: url("../img/handwork.jpg") no-repeat center center fixed;
+    background-size:auto;
+}
+
+
+#container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#hero img {
+    	height: 500px; 
+        width: 100%;
+        max-width: 100%; 
+    	border-radius: 9px;
+		margin: 1px auto;
+}
+
+
+/* Style rule for box sizing applies to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Style rules for mobile viewport */
+
+/* Style rule for header */
+header {
+    top: 0;
+    
+    height: 190px;
+	border-radius: 15px;
+	margin-bottom: 1%;
+}
+
+/* Larger header image */
+.header-avatar-container {
+    display: flex; /* Use flexbox to make the images align horizontally */
+    justify-content: space-around; /* Adjust the spacing as needed */
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.header-img-container {
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+.header-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+
+
+/* Hamburger menu button styles */
+.menu-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Hamburger menu bars styles */
+.bar {
+    width: 45px;
+    height: 3px;
+    background-color:white;
+    margin: 12px 0;
+	margin-left: 600px;
+    transition: 0.4s;
+}
+
+/* Dropdown menu styles */
+.dropdown-content {
+    display:none;
+    position:absolute;
+    background-color:darkslategrey;
+    min-width: 160px;
+	width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	right: 0;
+	border-radius: 15px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color:darkturquoise;
+	border-radius: 15px;
+}
+
+/* Show the dropdown menu when menu-btn is clicked */
+.menu-btn.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-btn.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu-btn.active + .dropdown-content {
+    display: block;
+}
+
+
+ /*Show mobile class, hide tablet-desktop class */
+
+.mobile {
+    display: block;
+}
+
+.tablet-desktop {
+    display: none;
+}
+
+/* Style rules for main content with gradient background */
+main {
+    background: linear-gradient(to right, gainsboro, white); 
+    padding: 2%;
+    font-size: 1.15em;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 9px;
+	
+}
+
+#top-projects {
+    display: flex;
+    flex-direction: column; /* Stack the projects vertically*/
+    align-items: center; /* Center-align projects horizontally*/ 
+}
+
+#top-projects article {
+    width: 48%;
+    margin-top: 1.5em;
+}
+
+#top-projects article:first-child {
+    text-align: center;
+    text-transform: uppercase; 
+}
+
+
+#top-projects h2 {
+    text-align: center; 
+    -webkit-background-clip: text;
+    color:darkslategray;
+    padding: 10px; 
+    margin-bottom: 1px; /* Adjust margin as needed*/
+    font-size: 2em; /* Adjust font size as needed*/ 
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	text-decoration:underline;
+}
+
+#top-projects h3{
+	text-decoration:overline;
+}
+
+#top-projects img{
+	border-radius: 8px; 
+}
+
+
+
+
+/* Gradient style for h1 elements */
+h1 {
+    background: linear-gradient(to right, #4e54c8, #8f94fb); /* Adjust colors as needed*/
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    padding: 10px; /* Adjust padding as needed */
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+/* Additional styling for the em elements within h1 */
+h1 em {
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+.mobile h3 {
+    text-shadow: 5px 5px 8px #ccc;
+}
+
+article {
+    padding: 2%;
+}
+
+article h3 {
+    text-align: center;
+}
+
+article img {
+    margin: 0 auto;
+}
+
+article ul {
+    margin-left: 10%;
+}
+
+article:nth-of-type(2) {
+    background-color: rgba(204, 204, 204, 0.3);
+}
+
+
+.contact-twitter-link,
+.contact-discord-link,
+.contact-instagram-link,
+.contact-LinkedIn-link {
+    color: olive;
+    text-decoration: none;
+}
+
+/* Style rules for social boxes */
+.social-box {
+    background: linear-gradient(to bottom, #f2f2f2, #d9d9d9); /* Updated subtle and neutral colors */
+    border: 1px solid #000;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out; /* Add transition for smooth hover effect */
+}
+
+/* Style rule for the link in the Email Me section */
+.social-box a {
+    color:darkslategray; /* Replace YourDesiredColor with the color you want */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+.social-box:hover {
+    background: linear-gradient(to bottom, #4a90e2, #64b5f6); /* Updated brighter colors on hover */
+}
+
+.social-box h4 {
+    color: black; /* Updated text color */
+    margin-bottom: 6px;
+}
+
+.social-box p {
+    color: black; /* Updated text color */
+}
+
+#form {
+    margin-top: 2%;
+    background-color: burlywood;
+    padding: 2%;
+}
+
+#form h2 {
+    text-align: center;
+}
+
+/* Style rules for form elements */
+fieldset {
+    margin-bottom: 2%;
+    display: inline-block; 
+    vertical-align: top; 
+    width: 48%; 
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: inline-block; 
+    width: 30%; 
+    padding-top: 3%;
+}
+
+input,
+select,
+textarea {
+    display: inline-block; 
+    width: 65%; /* Adjust the width of the input/select/textarea elements*/ 
+    box-sizing: border-box; /* Include padding and border in the width */
+    margin-bottom: 2%;
+}
+
+form #submit {
+    margin: 0 auto;
+    border: none;
+    display: block;
+    width: 20%; /* Adjust the width as needed */
+    padding: 1%;
+    background-color: peru;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+
+form #submit:hover {
+    background-color: #a0522d; /* Change the background color on hover */
+    color: white; /* Change the text color on hover */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+/* Style rules for footer content */
+footer {
+    background-color:#000000;
+    color: white;
+    text-align: center;
+    padding: 20px 3px;
+    border-radius: 4px;
+    position: relative; /* Added relative positioning */
+}
+
+.social {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px; 
+    display: flex;
+}
+
+.copyright {
+    padding: 2px 3px;
+	margin-bottom: 2%;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    margin:  5px;
+    transition: transform 0.3s;
+    padding: px 3px;
+    background:#000000;
+	border-radius: 6px;
+	margin-bottom: 10px
+}
+
+.social img:hover {
+    transform: scale(1.2);
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px), print {
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* Tablet Viewport: Style rule for header */
+    header {
+        padding-bottom: 2%;
+    }
+
+    /* Tablet Viewport: Style rules for nav area */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid #fff;
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav li a {
+        padding: 0.1em 0.75em;
+    }
+
+    /* Tablet Viewport: Style rules for main content area */
+    main ul {
+        margin: 0 0 4% 10%;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+    }
+
+    .pic-text {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    aside {
+        text-align: center;
+        font-size: 1.25em;
+        font-style: italic;
+        font-weight: bold;
+        padding: 2%;
+        
+        box-shadow: 5px 5px 8px #000;
+        text-shadow: 5px 5px 5px #b3b3b3;
+        border-radius: 0 15px;
+    }
+
+    .grid-item4 {
+        grid-column: 1 / span 3;
+    }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1015px), print {
+   
+	/* Desktop Viewport: Style rule for header */
+    header {
+        width: 25%;
+        float: left;
+        padding-bottom: 0;
+    }
+
+    /* Desktop Viewport: Style rules for nav area */
+	
+    nav {
+        float: right;
+		display:inline;
+        width: 60%;
+        margin: 4em 1em 0 0;
+    }
+
+    nav ul {
+        text-align: right;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav li a {
+        padding: 0.5em 1em;
+    }
+
+    nav li a:hover {
+        color: #000;
+        background-color: #fff;
+    }
+
+    /* Desktop Viewport: Style Rules for main content */
+	
+    main {
+        clear: left;
+    }
+
+    main h1 {
+        font-size: 1.8em;
+    }
+
+    article h3 {
+        font-size: 1.75em;
+    }
+
+    .pic-text {
+        font-size: 1;
+    }
+}
+
