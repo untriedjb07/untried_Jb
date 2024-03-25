@@ -152,6 +152,107 @@ header {
     display: none;
 }
 
+/*GALLERY*/
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  border: 3px solid #fff; /* Add border */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+  border-radius: 20px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 50px; /* Adjust button width */
+  height: 50px; /* Adjust button height */
+  line-height: 50px; /* Center text vertically */
+  text-align: center; /* Center text horizontally */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%; /* Circular button */
+  transition: background-color 0.1s ease;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 10px;
+}
+
+/* On hover, add a darker background color */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker semi-transparent background */
+}
+
+/* Caption text */
+.text {
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  text-align: center;
+}
+
+/* Number text (1/4 etc) */
+.numbertext {
+  color: #fff;
+  font-size: 14px;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 9.0s ease;
+}
+
+.active, .dot:hover {
+  background-color:#FFFFFF;
+}
+
+/* Fading animation */
+.fade {
+  animation-name:fade;
+  animation-duration: 0.2s;
+}
+
+@keyframes fade {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+  
+}
+
+
+
 /* Style rules for main content with gradient background */
 main {
     background: linear-gradient(to right, gainsboro, white); 
