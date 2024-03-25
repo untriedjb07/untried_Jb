@@ -1,63 +1,159 @@
-<!doctype html>
-<!--This template is made by Jebril Mohammed-->
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-<link href="css/styles.css" rel="stylesheet" type="text/css">
-<style>
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
+<!DOCTYPE html>
+<!-- This website template was created by; JEBRIL MOHAMMED-->
+
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Gallery</title>
+	<meta name="description" content="Explore the portfolio of Jebril Mohammed - Student, Runner, Developer. Learn about his educational background, sports and health interests, and more.">
+	<link rel="stylesheet" href="css/styles.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab&display=swap" rel="stylesheet">
+	<!-- Favicon -->
+    <link rel="icon" href="img/top image copy.png" type="image/x-icon">
+	</head>
+<body>
+  
+	
+	<div id="container">
+  	<header>
+		
+		<!--  header image -->
+    	<div class="header-avatar-container">
+        <div class="header-img-container">
+            <img src="img/5fced198-96ef-4fbe-8549-5be3fc1d8b9e.JPG" alt="Header Image">
+        </div>
+
+    	</div>
+			<script>
+				function toggleMenu() {
+    		var menuBtn = document.querySelector('.menu-btn');
+    		menuBtn.classList.toggle('active');
+				}
+			</script>
+	</header>
+	
+    
+			<nav>
+    			<div class="menu-btn" onclick="toggleMenu()">
+        		<div class="bar"></div>
+        		<div class="bar"></div>
+        		<div class="bar"></div>
+    			</div>
+    			<div class="dropdown-content" id="menu">
+        			<a href="index.html">Home</a>
+        			<a href="about.html">About Me</a>
+        			<a href="portfolio.html">Portfolio</a>
+        			<a href="impossible list.html">Impossible List</a>
+        			<a href="contact.html">Contact Me</a>
+        			<a href="photo gallery.html">Gallery</a>
+    			</div>
+			</nav>
+    
+  										
+		
+<main>
+	
+	<p>I may not have won any beauty contests, but hey, that's just me! Embracing my unique charm with a sprinkle of humor.</p>
+	
+
+	
+	<div class="slideshow-container">
+
+  	<!-- Full-width images with number and caption text -->
+  	<div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="img/IMG_2526.JPG" width="100%" height="70%" alt="jb">
+    <div class="text">Caption Text 1</div>
+  	</div>
+
+  	<div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="img/IMG_5178.JPG" width="100%" height="70%" alt="jb">
+    <div class="text">Caption Text 2</div>
+  	</div>
+
+  	<div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="img/IMG_1393.JPG" width="100%" height="70%" alt="jb">
+    <div class="text">Caption Text 3</div>
+  	</div>
+
+  	<div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="img/IMG_5177.JPG" width="100%" height="70%" alt="jb">
+    <div class="text">Caption Text 4</div>
+  	</div>
+
+  	<!-- Next and previous buttons -->
+  	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br>
+
+			<!-- The dots/circles -->
+	<div style="text-align:center">
+  	<span class="dot" onclick="currentSlide(1)"></span>
+  	<span class="dot" onclick="currentSlide(2)"></span>
+  	<span class="dot" onclick="currentSlide(3)"></span>
+  	<span class="dot" onclick="currentSlide(4)"></span>
+	</div>
+
+			<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) { // If n is greater than the number of slides, reset to the first slide
+    slideIndex = 1;
+  }
+  if (n < 1) { // If n is less than 1, set it to the last slide
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  // Hide all slides initially
+  }
+  slides[slideIndex - 1].style.display = "block";  // Display the current slide
 }
 
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-</style>
-</head>
+</script>
 
-	<body>
 
-<div class="gallery">
-  <a target="_blank" href="img/IMG_5200_jpg.JPG">
-    <img src="img_5terre.jpg" alt="A young man in with shirt" width="600" height="400">
-  </a>
-  <div class="desc">This is me in MONO filter</div>
+
+		
+</main>
+  
+    
+  
+		
+	<footer>
+        <div class="copyright">
+            <p>&copy; Copyright 2023. All rights reserved.</p>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com" target="_blank"><img src="img/facebook-logo.png" alt="black and white Facebook logo"></a> 
+            <a href="https://twitter.com" target="_blank"><img src="img/twitter-logo.png" alt="black and white Twitter logo"></a>
+            <!-- Add the icons for Discord, LinkedIn, and Instagram -->
+            <a href="https://discord.com" target="_blank"><img src="img/discord icon.jpg" alt="Discord icon"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="img/linkedIn icon.jpg" alt="LinkedIn icon"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="img/insta image.jpg" alt="Instagram icon"></a>
+        </div>
+  	</footer>
+		
+
 </div>
-
-<div class="gallery">
-  <a target="_blank" href="img/IMG_5204_jpg.JPG">
-    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_mountains.jpg">
-    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
 </body>
 </html>
