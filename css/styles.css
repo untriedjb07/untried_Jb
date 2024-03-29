@@ -14,7 +14,7 @@ body, header, main, nav, footer, h1, div, img, ul, figure, section, article, asi
 
 /* Style rules for body and images */
 body {
-    background: url("../img/handwork.jpg") no-repeat center center fixed;
+    background: url("../img/cub.png") no-repeat center center fixed;
     background-size:auto;
 }
 
