@@ -17,21 +17,36 @@
 <body>
 	
 	<div id="container">
-	<!-- Use the header area for the website name or the logo	-->
-		<header>
-		<a href="index.html"><img src="IMAGES/5fced198-96ef-4fbe-8549-5be3fc1d8b9e.JPG" alt="anime image" width="200" height="200"></a>
-		</header>
+    <header>
+        <!-- Larger header image -->
+        <div class="header-avatar-container">
+            <div class="header-img-container">
+                <img src="img/5fced198-96ef-4fbe-8549-5be3fc1d8b9e.JPG" alt="Header Image">
+            </div>
+        </div>
+        <script>
+            function toggleMenu() {
+                var menuBtn = document.querySelector('.menu-btn');
+                menuBtn.classList.toggle('active');
+            }
+        </script>
+    </header>
 	
 	<!-- Use the navigation area to add hyperlinks to other pages within the website	-->
 	<nav>
-		<ul>
-				<li><a href="index.html">Home</a></li> 
-                <li><a href="about.html">About Me</a></li> 
-                <li><a href="portfolio.html">Portfolio</a></li> 
-                <li><a href="impossible list.html">Impossible List</a></li> 
-                <li><a href="contact.html">Contact Me</a></li>
-		</ul>
-	</nav>
+        <div class="menu-btn" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="dropdown-content" id="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="impossible list.html">Impossible List</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </nav>
 	
 	<!-- Use the main area to add the main content of the webpage    -->
         <main>
@@ -45,7 +60,7 @@
 
                 <div class="social-box">
                     <h4>Twitter:</h4>
-                    <p><a href="https://twitter.com" target="_blank"><img src="images/twitter-logo.png" alt="black and white Twitter logo"></a></p>
+                    <p><a href="https://twitter.com" target="_blank"><img src="img/twitter-logo.png" alt="black and white Twitter logo"></a></p>
                     <p>Follow me on Twitter for updates.</p>
                 </div>
 
