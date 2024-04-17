@@ -47,7 +47,7 @@ header {
 .header-avatar-container {
     display: flex; /* Use flexbox to make the images align horizontally */
     justify-content: space-around; /* Adjust the spacing as needed */
-    margin-bottom: 29px; /* Adjust margin as needed */
+    margin-bottom: 30px; /* Adjust margin as needed */
 }
 
 .header-img-container {
@@ -238,7 +238,8 @@ article:nth-of-type(2) {
     background-color: rgba(204, 204, 204, 0.3);
 }
 
-
+							/*CONTACT PAGE*/
+ 
 .contact-twitter-link,
 .contact-discord-link,
 .contact-instagram-link,
@@ -249,32 +250,74 @@ article:nth-of-type(2) {
 
 /* Style rules for social boxes */
 .social-box {
-    background: linear-gradient(to bottom, #f2f2f2, #d9d9d9); /* Updated subtle and neutral colors */
-    border: 1px solid #000;
-    padding: 15px;
-    margin-bottom: 20px;
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Set a fixed height for all social boxes */
+    background: linear-gradient(to bottom, #f2f2f2, #d9d9d9);
+    border: 1.5px solid #000;
+    padding: 10px; /* Adjust padding as needed */
+    margin: 10px; /* Adjust margin as needed */
     border-radius: 8px;
-    transition: background 0.3s ease-in-out; /* Add transition for smooth hover effect */
+    transition: background 0.3s ease-in-out;
+    display: inline-block; /* Make boxes inline */
+    text-align: center; /* Center text */
+    box-sizing: border-box; /* Include padding and border in the box's total height */
 }
+
+/* Hover styles for Twitter */
+.social-box.twitter:hover {
+    background: lightblue;
+}
+
+/* Hover styles for Discord */
+.social-box.discord:hover {
+    background: #441C74;
+}
+
+/* Hover styles for LinkedIn */
+.social-box.linkedin:hover {
+    background: #3B2C85;
+}
+
+/* Hover styles for Instagram */
+.social-box.instagram:hover {
+    background:#D18AD8;
+}
+
+.social-box.email:hover {
+	background:#DD8486 ;
+}
+
+/* Hover styles for h4 text */
+.social-box:hover h4 {
+    color: white;
+}
+
 
 /* Style rule for the link in the Email Me section */
 .social-box a {
-    color:darkslategray; /* Replace YourDesiredColor with the color you want */
-    text-decoration: none; /* Optional: Remove underline */
+    display: block; /* Make the anchor tag a block element */
+    margin-bottom: 10px; /* Add some space between image and text */
 }
 
-.social-box:hover {
-    background: linear-gradient(to bottom, #4a90e2, #64b5f6); /* Updated brighter colors on hover */
+.social-box a img {
+    width: 50px; /* Adjust image size as needed */
+    height: 50px; /* Adjust image size as needed */
+    margin-bottom: 5px; /* Adjust margin as needed */
+	border-radius: 12px
 }
 
 .social-box h4 {
-    color: black; /* Updated text color */
+    color: black;
     margin-bottom: 6px;
 }
 
 .social-box p {
-    color: black; /* Updated text color */
+    color: black;
+    margin-bottom: 10px; /* Add some space between text and border */
 }
+
+
+
 
 #form {
     margin-top: 2%;
@@ -320,14 +363,15 @@ form #submit {
     display: block;
     width: 20%; /* Adjust the width as needed */
     padding: 1%;
-    background-color: peru;
+    background-color: cadetblue;
     font-size: 1em;
     border-radius: 10px;
+	margin-bottom: 15px;
 }
 
 
 form #submit:hover {
-    background-color: #a0522d; /* Change the background color on hover */
+    background-color:darkgray; /* Change the background color on hover */
     color: white; /* Change the text color on hover */
     cursor: pointer; /* Change the cursor to a pointer on hover */
 }
@@ -335,7 +379,7 @@ form #submit:hover {
 
 
 
-								/*GALLERY*/
+								/*SLIDER*/
 * {
   box-sizing: border-box;
 }
@@ -468,9 +512,60 @@ footer {
 }
 
 /* Media Query for Desktop Viewport */
-@media screen and (min-width: 1015px), print {
-    /* Your desktop viewport styles */
+@media screen and (min-width: 1024px) {
+    /* Adjustments for header */
+    header {
+        height: 210px; /* Reduce header height for desktop */
+    }
+
+    /* Adjustments for navigation */
+    nav {
+        width: 40%; /* Reduce navigation width for desktop */
+        margin-top: 1em; /* Adjust margin as needed */
+        margin-right: 2em; /* Adjust margin as needed */
+    }
+
+    nav ul {
+        text-align: right;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 20px; /* Adjust margin between navigation links */
+    }
+
+    nav li:first-child {
+        margin-left: 0; /* Remove margin for the first navigation link */
+    }
+
+    nav li a {
+        padding: 0.5em 1em;
+    }
+
+    /* Adjustments for main content */
+    main {
+        padding: 2% 5%; /* Add more padding to the main content */
+    }
+
+    main h1 {
+        font-size: 2.5em; /* Increase font size for main headings */
+    }
+
+    article {
+        width: 60%; /* Adjust article width */
+        margin: 0 auto; /* Center-align articles */
+        margin-bottom: 2em; /* Add some bottom margin to articles */
+    }
+
+    article img {
+        max-width: 100%; /* Ensure images don't overflow the article container */
+    }
+
+    article h3 {
+        font-size: 1.5em; /* Increase font size for article headings */
+    }
 }
+
 
 
 
@@ -636,3 +731,53 @@ footer {
 }
 #ok {
 }
+
+/* Media Query for Mobile Viewport */
+@media screen and (max-width: 629px) {
+    /* Style rule for header */
+    header {
+        height: 150px; /* Adjust header height for mobile */
+    }
+
+    /* Style rule for nav area */
+    nav {
+        width: 100%; /* Occupy full width */
+        margin: 0; /* Remove margin */
+        padding: 10px 0; /* Add some padding */
+        text-align: center; /* Center-align navigation links */
+    }
+
+    nav ul {
+        display: block; /* Display navigation links as block elements */
+    }
+
+    nav li {
+        display: inline-block; /* Display navigation items horizontally */
+        margin: 0 5px; /* Add some margin between navigation items */
+    }
+
+    nav li a {
+        padding: 8px 12px; /* Adjust padding for better touch interaction */
+    }
+
+    /* Style rule for main content */
+    main {
+        padding: 10px; /* Add some padding */
+    }
+
+    /* Style rule for footer */
+    footer {
+        padding: 10px; /* Add some padding */
+    }
+
+    /* Style rule for social icons in footer */
+    .social {
+        bottom: 10px; /* Adjust position */
+    }
+
+    .social img {
+        width: 25px; /* Adjust icon size */
+        height: 25px; /* Adjust icon size */
+    }
+}
+
