@@ -1,21 +1,22 @@
-<!DOCTYPE html>
+ <!doctype html>
 <!-- This website template was created by; JEBRIL MOHAMMED-->
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Digital Odyssey</title>
-    <meta name="description" content="Explore the portfolio of Jebril Mohammed - Student, Runner, Developer. Learn about his educational background, sports and health interests, and more.">
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab&display=swap" rel="stylesheet">
-    <!-- Favicon -->
+	<meta charset="utf-8">
+	<title>Digital Odyssey</title>
+	<meta name="description" content="Explore the portfolio of Jebril Mohammed - Student, Runner, Developer. Learn about his educational background, sports and health interests, and more.">
+	<link rel="stylesheet" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab&display=swap" rel="stylesheet">
+	<!-- Favicon -->
     <link rel="icon" href="img/top image copy.png" type="image/x-icon">
 </head>
+
 <body>
-<div id="container">
+	
+	<div id="container">
     <header>
         <!-- Larger header image -->
         <div class="header-avatar-container">
@@ -30,7 +31,9 @@
             }
         </script>
     </header>
-    <nav>
+	
+	<!-- Use the navigation area to add hyperlinks to other pages within the website	-->
+	<nav>
         <div class="menu-btn" onclick="toggleMenu()">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -44,74 +47,86 @@
             <a href="contact.html">Contact Me</a>
         </div>
     </nav>
-    <div class="slideshow-container">
+	
+	<!-- Use the main area to add the main content of the webpage    -->
+        <main class="container">
+    <div id="contact">
+      <div class="social-box email">
+            <h4>Email Me:</h4>
+          <a href="mailto:jebrilmohammed02@gmail.com"><img src="img/gmail-logo-black-2.png" alt="Email Icon"></a>
+          <p>Message me on Gmail        .</p>
+        </div>
 
-  	<!-- Full-width images with number and caption text -->
-  	<div class="mySlides fade">
-    <img src="img/IMG_2526.JPG" width="100%" height="70%" alt="jb">
-  	</div>
+        <div class="social-box twitter">
+            <h4>Twitter:</h4>
+            <a href="https://twitter.com" target="_blank"><img src="img/twitter-logo.png" alt="Twitter Logo"></a>
+            <p>Follow me on Twitter for updates.</p>
+        </div>
 
-  	<div class="mySlides fade">
-    <img src="img/IMG_5178.JPG" width="100%" height="70%" alt="jb">
-  	</div>
+      <div class="social-box discord">
+            <h4>Discord:</h4>
+          <a href="J.B #1776" class="contact-discord-link"><img src="img/discord icon.jpg" alt="Discord Icon"></a>
+          <p>Text me on Discord and join my lobby .</p>
+        </div>
 
-  	<div class="mySlides fade">
-    <img src="img/IMG_1393.JPG" width="100%" height="70%" alt="jb">
-  	</div>
+      <div class="social-box instagram">
+            <h4>Instagram:</h4>
+          <a href="https://www.instagram.com/jebril_moh/#" target="_blank" class="contact-instagram-link"><img src="img/insta image.jpg" alt="Instagram Icon"></a>
+          <p>Explore my pictures and  follow.</p>
+        </div>
 
-  	<div class="mySlides fade">
-    <img src="img/IMG_5177.JPG" width="100%" height="70%" alt="jb">
-  	</div>
+        <div class="social-box linkedin">
+            <h4>LinkedIn:</h4>
+            <a href="https://www.linkedin.com/" class="contact-LinkedIn-link"><img src="img/linkedIn icon.jpg" alt="LinkedIn Icon"></a>
+            <p>Connect with me on LinkedIn.</p>
+        </div>
+    </div>
+			
+</main>
 
-  	<!-- Next and previous buttons -->
-  	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  	<a class="next" onclick="plusSlides(1)">&#10095;</a>
-	</div>
-	<br>
 
-			<!-- The dots/circles -->
-	<div style="text-align:center">
-  	<span class="dot" onclick="currentSlide(1)"></span>
-  	<span class="dot" onclick="currentSlide(2)"></span>
-  	<span class="dot" onclick="currentSlide(3)"></span>
-  	<span class="dot" onclick="currentSlide(4)"></span>
-	</div>
+			<main class="formi">
+			<form class="form-grid"><!-- Start Form -->
+                    
+                    <fieldset class="fil">
+                        <legend>Feel free to leave your info so I can reach you.</legend>
+                        <label for="fName">First Name:</label>
+                        <input type="text" name="fName" id="fName" required>
 
-			<script>
-  let slideIndex = 1;
-showSlides(slideIndex);
+                        <label for="lName">Last Name:</label>
+                        <input type="text" name="lName" id="lName" required> 
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                        
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </fieldset>
+				<fieldset class="fil">
+                            <legend>Referral Source</legend>
+                            <label for="reference">How did you find me?</label>
+                            <select name="reference" id="reference">
+                                <option value="ad">Advertisement</option>
+                                <option value="friend">Friend</option>
+                                <option value="google">Google</option>
+                                <option value="social">Social Media</option>
+                                <option value="other">Other</option>
+                            </select>
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) { // If n is greater than the number of slides, reset to the first slide
-    slideIndex = 1;
-  }
-  if (n < 1) { // If n is less than 1, set it to the last slide
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  // Hide all slides initially
-  }
-  slides[slideIndex - 1].style.display = "block";  // Display the current slide
-}
-
-</script>
-    <main>
-        <h3>Hey!</h3>
-        <p>I'm Jebril Mohammed from the United States! My friends call me 'Jaybee'. I love programming, playing games, as well as running, taking photos, and learning new things!</p>
-        <h3>Let's Build Something Together!</h3>
-        <p>Whether you're interested in my academic endeavors or exploring my portfolio, I'm excited to share my experiences with you. Feel free to navigate through the sections, and let's connect for future possibilities.</p>
-    </main>
-    <footer>
+                            <label for="questions">Questions?</label>
+                            <textarea id="questions" name="questions" rows="5" cols="35"></textarea>
+                    </fieldset>
+				
+			<input type="submit" id="submit" value="Submit" class="btn">
+                    
+          </form>
+		</main>
+			
+		
+	
+	
+	<!-- Use the footer area to add webpage footer content	-->
+	<footer>
         <div class="copyright">
             <p>&copy; Copyright 2023. All rights reserved.</p>
         </div>
@@ -124,6 +139,9 @@ function showSlides(n) {
             <a href="https://www.instagram.com" target="_blank"><img src="img/insta image.jpg" alt="Instagram icon"></a>
         </div>
     </footer>
-</div>
+
+	
+	</div>
 </body>
 </html>
+
