@@ -563,7 +563,8 @@ footer {
 
 /* Style rules for footer content */
 footer {
-    background-color:#000000;
+    
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
     padding: 20px 3px;
@@ -663,8 +664,10 @@ footer {
     }
 }
 
-/* Media Query for Desktop Viewport */
-@media screen and (min-width: 1015px), print {
+								/* Media Query for Desktop Viewport */
+
+								/*		\\\\\\\\\\\\\\\\\\		*/
+@media screen and (min-width: 1024px), print {
    
 	/* Desktop Viewport: Style rule for header */
     header {
@@ -700,7 +703,7 @@ footer {
     }
 	
 	#menu, .dropdown-content{
-		margin-right: auto;
+		margin-right:90px;
 	}
 
     /* Desktop Viewport: Style Rules for main content */
@@ -720,18 +723,12 @@ footer {
     .pic-text {
         font-size: 1;
     }
-.container {
-}
-.formi {
-}
+
 
 
 }
 
-.ok {
-}
-#ok {
-}
+
 
 /* Media Query for Mobile Viewport */
 @media screen and (max-width: 629px) {
