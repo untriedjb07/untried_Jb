@@ -14,7 +14,7 @@ body, header, main, nav, footer, h1, div, img, ul, figure, section, article, asi
 
 /* Style rules for body and images */
 body {
-    background: url("../img/handwork.jpg") no-repeat center center fixed;
+    background: url("../img/photo-03.jpg") no-repeat center center fixed;
     background-size:auto;
 }
 
@@ -149,13 +149,15 @@ header {
 }
 
 /* Style rules for main content with gradient background */
-main {
-    background: linear-gradient(to right, gainsboro, white); 
+main, .container {
+    background:rgba(255,255,255,0.54);
     padding: 2%;
     font-size: 1.15em;
     font-family: 'Roboto Slab', serif;
     border-radius: 9px;
 	margin-bottom: 20px;
+	
+	
 	
 }
 
@@ -348,6 +350,10 @@ label {
     padding-top: 3%;
 }
 
+main, .formi {
+	background:rgba(255,255,255,0.54);
+}
+
 input,
 select,
 textarea {
@@ -386,13 +392,19 @@ form #submit:hover {
 
 
 /* Slideshow container */
+
 .slideshow-container{
-    max-width: 100%;
-    margin-top: 215px; /* Adjust margin-top to move the slider */
+    
+    margin-top: 225px; /* Adjust margin-top to move the slider */
     border: 3px solid #fff; /* Add border */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow */
     border-radius: 20px;
-    height: auto;
+    height: 595px;
+	width: 940px;
+	margin-left: 150px;
+	
+
+	
 }
 
 
@@ -403,37 +415,16 @@ form #submit:hover {
 }
 
 .mySlides img {
-	border-radius: 20px
+	border-radius: 20px;
+	height: 590px;
+	width: 935px;
+	
 }
 
 
 
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position:absolute;
-    top: 110%;
-    width: 50px; /* Adjust button width */
-    height: 50px; /* Adjust button height */
-    line-height: 50px; /* Center text vertically */
-    text-align: center; /* Center text horizontally */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 50%; /* Circular button */
-    transition: background-color 0.1s ease;
-}
 
-/* Position the "next button" to the right */
-.next {
-    right: 10px; /* Adjust distance from right */
-}
 
-/* Position the "previous button" to the left */
-.prev {
-    left: 10px; /* Adjust distance from left */
-}
 
 
 /* The dots/bullets/indicators */
@@ -475,7 +466,7 @@ main {
 
 /* Style rules for footer content */
 footer {
-    background-color: #000000;
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
     padding: 20px 3px;
@@ -707,6 +698,10 @@ footer {
         color: #000;
         background-color: #fff;
     }
+	
+	#menu, .dropdown-content{
+		margin-right: auto;
+	}
 
     /* Desktop Viewport: Style Rules for main content */
 	
@@ -725,6 +720,12 @@ footer {
     .pic-text {
         font-size: 1;
     }
+.container {
+}
+.formi {
+}
+
+
 }
 
 .ok {
@@ -736,7 +737,7 @@ footer {
 @media screen and (max-width: 629px) {
     /* Style rule for header */
     header {
-        height: 150px; /* Adjust header height for mobile */
+        height: auto; /* Adjust header height for mobile */
     }
 
     /* Style rule for nav area */
@@ -749,14 +750,16 @@ footer {
 
     nav ul {
         display: block; /* Display navigation links as block elements */
+        padding: 0;
     }
 
     nav li {
-        display: inline-block; /* Display navigation items horizontally */
-        margin: 0 5px; /* Add some margin between navigation items */
+        display: block; /* Display navigation items as block elements */
+        margin: 10px 0; /* Add some margin between navigation items */
     }
 
     nav li a {
+        display: inline-block; /* Display navigation items inline */
         padding: 8px 12px; /* Adjust padding for better touch interaction */
     }
 
@@ -773,11 +776,24 @@ footer {
     /* Style rule for social icons in footer */
     .social {
         bottom: 10px; /* Adjust position */
+        text-align: center; /* Center-align social icons */
     }
 
     .social img {
         width: 25px; /* Adjust icon size */
         height: 25px; /* Adjust icon size */
+        margin: 0 5px; /* Add some margin between icons */
+    }
+
+    /* Adjust slideshow container for mobile */
+    .slideshow-container {
+        margin: 0 auto; /* Center the container */
+        width: 100%; /* Occupy full width */
+        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    }
+
+    .mySlides img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Auto-adjust height */
     }
 }
-
