@@ -75,20 +75,25 @@ header {
     display:inline-block;
     cursor: pointer;
     padding: 10px;
+	width:10px;
+	
+	
 }
 
-.menu-btn.active {
-	background: transparent;
-}
+
 
 /* Hamburger menu bars styles */
 .bar {
     width: 45px;
-    height: 3px;
+    height: 4.5px;
     background-color:white;
     margin: 12px 0;
 	margin-left: 600px;
     transition: 0.4s;
+}
+
+.menu-btn.active {
+	background: transparent;
 }
 
 /* Dropdown menu styles */
@@ -339,6 +344,10 @@ fieldset {
     width: 48%; 
 }
 
+.fil {
+		width: 103%;
+}
+
 fieldset legend {
     font-weight: bold;
     font-size: 1.25em;
@@ -497,10 +506,7 @@ footer {
     transform: scale(1.2);
 }
 
-/* Media Query for Tablet Viewport */
-@media screen and (min-width: 630px), print {
-    /* Your tablet viewport styles */
-}
+
 
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 1024px) {
@@ -508,6 +514,10 @@ footer {
     header {
         height: 210px; /* Reduce header height for desktop */
     }
+	
+	.fil {
+		width: 103%;
+}
 
     /* Adjustments for navigation */
     nav {
@@ -606,6 +616,10 @@ footer {
     .tablet-desktop {
         display: block;
     }
+	
+	.fil {
+		width: 100%;
+	}
 
     .mobile {
         display: none;
@@ -667,34 +681,31 @@ footer {
 								/* Media Query for Desktop Viewport */
 
 								/*		\\\\\\\\\\\\\\\\\\		*/
-@media screen and (min-width: 1024px), print {
-   
-	/* Desktop Viewport: Style rule for header */
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1015px), print {
+    
+    /* Desktop Viewport: Style rule for header */
     header {
         width: 25%;
         float: left;
         padding-bottom: 0;
     }
 	
-	
-	
-	.menu-btn.active + .dropdown-content {
-    display: block;
-}
-
+	.fil {
+		width: 100%;
+	}
+    
     /* Desktop Viewport: Style rules for nav area */
-	
     nav {
         float: right;
-		display:inline;
-        width: 60%;
+        width: 70%;
         margin: 4em 1em 0 0;
     }
 
     nav ul {
         text-align: right;
     }
-
+    
     nav li {
         border: none;
     }
@@ -702,105 +713,190 @@ footer {
     nav li a {
         padding: 0.5em 1em;
     }
-
+    
     nav li a:hover {
         color: #000;
         background-color: #fff;
+        transform: scale(1.3);
     }
-	
-	#menu, .dropdown-content{
-		margin-right:90px;
-	}
-
+    
     /* Desktop Viewport: Style Rules for main content */
-	
     main {
         clear: left;
     }
-	
-	main, .formi {
-	background:rgba(255,255,255,0.54);
-}
-
+    
     main h1 {
         font-size: 1.8em;
     }
-
+    
     article h3 {
         font-size: 1.75em;
     }
-
+    
     .pic-text {
-        font-size: 1;
+        font-size: 1.5em;  
+        padding: 20px;
+    }
+    
+    .frame  {
+        opacity: 0.9;
+    }
+    
+    .frame:hover {
+        opacity: 1;
+        box-shadow: 8px 8px 10px #808080;
+        transform: translateY(10px);
+    }
+    
+    #weights, #cardio, #training {
+        width: 29%;
+        float: left;
+        margin: 0 2%;
     }
 
-
-
+    #exercises {
+        clear: left;
+    }
+    
+   .offer:hover {
+        transform: scale(1.25);
+        cursor: pointer;
+    }
+    
+    /* Desktop Viewport: Style rules for form elements */
+    form {
+        width: auto;
+    }
+    
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px; 
+    }
+    
+    .btn {
+        grid-column: 1 / span 3;
+    }
+    
 }
 
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px) {
+ 
+    #container {
+        width: 1920px;
+        margin: 0 auto;
+    }
+    
+    .fil {
+		width: 100%;
+	}
+    
+}
 
+/* Media Query for Print */
+@media print {
+    
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+    
+}
+ 
+/* Show mobile class, hide tablet-desktop class and menu-links id */
+.mobile {
+    display: block;
+}
 
-/* Media Query for Mobile Viewport */
-@media screen and (max-width: 629px) {
+.tablet-desktop, #menu-links {
+    display: none;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px), print {
+    
     /* Style rule for header */
     header {
-        height: auto; /* Adjust header height for mobile */
+        padding-bottom: 2%;
     }
-
-    /* Style rule for nav area */
+	
+	.fil {
+		width: 100%;
+	}
+    
+    /* Style rules for nav area */
     nav {
-        width: 100%; /* Occupy full width */
-        margin: 0; /* Remove margin */
-        padding: 10px 0; /* Add some padding */
-        text-align: center; /* Center-align navigation links */
+        padding: 1%;
+        margin-bottom: 1%;
     }
 
     nav ul {
-        display: block; /* Display navigation links as block elements */
-        padding: 0;
+        list-style-type: none;
+        text-align: center;
     }
-
+    
     nav li {
-        display: block; /* Display navigation items as block elements */
-        margin: 10px 0; /* Add some margin between navigation items */
+        font-size: 1.5em;
+        font-family: 'Francois One', sans-serif;
+        display: inline-block;
+        border-right: 1px solid #fff;
     }
-
+    
+    nav li:last-child {
+        border-right: none;
+    }
+    
     nav li a {
-        display: inline-block; /* Display navigation items inline */
-        padding: 8px 12px; /* Adjust padding for better touch interaction */
+        padding: 0.1em 0.75em;
+        display: block;
+        color: #fff;
+        text-decoration: none;
     }
+    
+    /* Style rules for main content area */
+    main ul {
+        margin: 0 0 4% 10%;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+    }
+       
+    
+    
+    aside {
+        text-align: center;
+        font-size: 1.25em;
+        font-style: italic;
+        font-weight: bold;
+        padding: 2%;
+        background-color: rgba(204, 204, 204, 0.5);
+        box-shadow: 5px 5px 8px #000;
+        text-shadow: 5px 5px 5px #b3b3b3;
+        border-radius: 0 15px; 
+    }
+       
+    .grid-item4 {
+        grid-column: 1 / span 3;
+    }
+        
+    
 
-    /* Style rule for main content */
-    main {
-        padding: 10px; /* Add some padding */
+    
+    
+    
+    
+    /* Style rule for form element */
+    form {
+        width: 70%;
+        margin: 0 auto;
     }
-
-    /* Style rule for footer */
-    footer {
-        padding: 10px; /* Add some padding */
-    }
-
-    /* Style rule for social icons in footer */
-    .social {
-        bottom: 10px; /* Adjust position */
-        text-align: center; /* Center-align social icons */
-    }
-
-    .social img {
-        width: 25px; /* Adjust icon size */
-        height: 25px; /* Adjust icon size */
-        margin: 0 5px; /* Add some margin between icons */
-    }
-
-    /* Adjust slideshow container for mobile */
-    .slideshow-container {
-        margin: 0 auto; /* Center the container */
-        width: 100%; /* Occupy full width */
-        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
-    }
-
-    .mySlides img {
-        width: 100%; /* Make images responsive */
-        height: auto; /* Auto-adjust height */
-    }
+	
+	
+    
 }
+
+
