@@ -141,7 +141,7 @@ header {
  /*Show mobile class, hide tablet-desktop class */
 
 .mobile {
-    display: block;
+    display:inherit;
 }
 
 .tablet-desktop {
@@ -675,6 +675,12 @@ footer {
         float: left;
         padding-bottom: 0;
     }
+	
+	
+	
+	.menu-btn.active + .dropdown-content {
+    display: block;
+}
 
     /* Desktop Viewport: Style rules for nav area */
 	
@@ -711,6 +717,10 @@ footer {
     main {
         clear: left;
     }
+	
+	main, .formi {
+	background:rgba(255,255,255,0.54);
+}
 
     main h1 {
         font-size: 1.8em;
