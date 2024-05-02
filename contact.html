@@ -30,6 +30,15 @@
                 menuBtn.classList.toggle('active');
             }
         </script>
+		<script>function calculateMileage() {
+    var distance = document.getElementById("distance").value;
+    var fuelEfficiency = document.getElementById("fuel").value;
+    
+    var mileage = distance / fuelEfficiency;
+    
+    document.getElementById("result").innerHTML = "Your mileage is: " + mileage.toFixed(2) + " gallons.";
+}
+</script>
     </header>
 	
 	<!-- Use the navigation area to add hyperlinks to other pages within the website	-->
@@ -50,6 +59,25 @@
 	
 	<!-- Use the main area to add the main content of the webpage    -->
         <main class="container">
+    <!-- Mileage Calculator -->
+    <div id="mileage-calculator">
+        <h2>MILEAGE CALCULATOR</h2>
+        <label for="distance">Distance (in miles):</label>
+        <input type="number" id="distance" placeholder="Enter distance" required>
+        
+        <label for="fuel">Fuel Efficiency (miles per gallon):</label>
+        <input type="number" id="fuel" placeholder="Enter fuel efficiency" required>
+        
+        <button onclick="calculateMileage()">Calculate</button>
+        
+        <p id="result"></p>
+    </div>
+
+    
+</main>
+
+		
+		<main class="container">
     <div id="contact">
       <div class="social-box email">
             <h4>Email Me:</h4>
