@@ -88,7 +88,7 @@ header {
     height: 4.5px;
     background-color:white;
     margin: 12px 0;
-	margin-left: 600px;
+	margin-left:725px;
     transition: 0.4s;
 }
 
@@ -378,10 +378,11 @@ form #submit {
     display: block;
     width: 20%; /* Adjust the width as needed */
     padding: 1%;
-    background-color: cadetblue;
+    background-color: #4CAF50;
     font-size: 1em;
     border-radius: 10px;
 	margin-bottom: 15px;
+	color: white;
 }
 
 
@@ -410,7 +411,7 @@ form #submit:hover {
     border-radius: 20px;
     height: 595px;
 	width: 940px;
-	margin-left: 150px;
+	margin-left: auto;
 	
 
 	
@@ -483,6 +484,10 @@ footer {
     position: relative; /* Added relative positioning */
 }
 
+footer, .fo{
+	margin-bottom:-3px;
+}
+
 .social {
     position: absolute;
     left: 50%;
@@ -514,6 +519,21 @@ footer {
     header {
         height: 210px; /* Reduce header height for desktop */
     }
+	
+	.slideshow-container{
+    
+    margin-top: 225px; /* Adjust margin-top to move the slider */
+    border: 3px solid #fff; /* Add border */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+    border-radius: 20px;
+    height: 595px;
+	width: 940px;
+	margin-left: 390px;
+	
+
+	
+}
+
 	
 	.fil {
 		width: 103%;
@@ -568,6 +588,61 @@ footer {
 }
 
 
+/* Style rules for mileage calculator */
+#mileage-calculator {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+	
+}
+
+#mileage-calculator h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#mileage-calculator label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+#mileage-calculator input[type="number"] {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#mileage-calculator button {
+    width: 70%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+	margin-top: 40px;
+	
+}
+
+#mileage-calculator button:hover {
+    background-color: #45a049;
+	
+}
+
+#mileage-calculator #result {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
 
 
 
@@ -691,9 +766,33 @@ footer {
         padding-bottom: 0;
     }
 	
+	.bar {
+    width: 45px;
+    height: 4.5px;
+    background-color:white;
+    margin: 12px 0;
+	margin-left:725px;
+    transition: 0.4s;
+}
+	
 	.fil {
 		width: 100%;
 	}
+	
+	.slideshow-container{
+    
+    margin-top: 225px; /* Adjust margin-top to move the slider */
+    border: 3px solid #fff; /* Add border */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+    border-radius: 20px;
+    height: 595px;
+	width: 940px;
+	margin-left: 190px;
+	
+
+	
+}
+	
     
     /* Desktop Viewport: Style rules for nav area */
     nav {
@@ -900,3 +999,5 @@ footer {
 }
 
 
+.fo {
+}
