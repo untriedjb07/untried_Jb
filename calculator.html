@@ -1,0 +1,166 @@
+ <!doctype html>
+<!-- This website template was created by; JEBRIL MOHAMMED-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Digital Odyssey</title>
+	<meta name="description" content="Explore the portfolio of Jebril Mohammed - Student, Runner, Developer. Learn about his educational background, sports and health interests, and more.">
+	<link rel="stylesheet" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab&display=swap" rel="stylesheet">
+	<!-- Favicon -->
+    <link rel="icon" href="img/top image copy.png" type="image/x-icon">
+</head>
+
+<body>
+	
+	<div id="container">
+    <header>
+        <!-- Larger header image -->
+        <div class="header-avatar-container">
+            <div class="header-img-container">
+                <img src="img/5fced198-96ef-4fbe-8549-5be3fc1d8b9e.JPG" alt="Header Image">
+            </div>
+        </div>
+        <script>
+            function toggleMenu() {
+                var menuBtn = document.querySelector('.menu-btn');
+                menuBtn.classList.toggle('active');
+            }
+        </script>
+		
+		
+		
+<!--	script for mileage	-->
+		<script>function calculateMileage() {
+    var distance = document.getElementById("distance").value;
+    var fuelEfficiency = document.getElementById("fuel").value;
+    
+    var mileage = distance / fuelEfficiency;
+    
+    document.getElementById("result").innerHTML = "Your mileage is: " + mileage.toFixed(2) + " gallons.";
+}
+		</script>
+		
+		
+    </header>
+	
+	<!-- Use the navigation area to add hyperlinks to other pages within the website	-->
+	<nav>
+        <div class="menu-btn" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="dropdown-content" id="menu">
+            <a href="index.html">Home</a>
+        			<a href="about.html">About Me</a>
+        			<a href="portfolio.html">Portfolio</a>
+        			<a href="impossible list.html">Impossible List</a>
+        			<a href="contact.html">Contact Me</a>
+        			<a href="photo gallery.html">Gallery</a>
+					<a href="calculator.html">Calculator</a>
+        </div>
+    </nav>
+	
+	<!-- Use the main area to add the main content of the webpage    -->
+        <main class="container">
+    <!-- Mortgage Calculator -->
+    <div id="mortgage-calculator">
+        <h2>MORTGAGE CALCULATOR</h2>	<img src="img/morg.jpg" alt="Small Image">	
+        <label for="loanAmount">Loan Amount ($):</label>
+        <input type="number" id="loanAmount" placeholder="Enter loan amount" required>
+        
+        <label for="interestRate">Interest Rate (%):</label>
+        <input type="number" id="interestRate" placeholder="Enter interest rate" required>
+        
+        <label for="loanTerm">Loan Term (years):</label>
+        <input type="number" id="loanTerm" placeholder="Enter loan term" required>
+        
+        <button onclick="calculateMortgage()">Calculate</button>
+        
+        <p id="mortgageResult"></p>
+		
+    </div>
+
+    <!-- Mileage Calculator -->
+    <div id="mileage-calculator">
+        <h2>MILEAGE CALCULATOR</h2>  <img src="img/mileage.jpg" alt="Small Image">
+        <label for="distance">Distance (in miles):</label>
+        <input type="number" id="distance" placeholder="Enter distance" required>
+        
+        <label for="fuel">Fuel Efficiency (miles per gallon):</label>
+        <input type="number" id="fuel" placeholder="Enter fuel efficiency" required>
+        
+        <button onclick="calculateMileage()">Calculate</button>
+        
+        <p id="mileageResult"></p>
+		
+    </div>
+</main>
+
+
+		
+		
+		
+		<script>
+    // Mortgage Calculator Function
+    function calculateMortgage() {
+        const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+        const interestRate = parseFloat(document.getElementById('interestRate').value) / 100 / 12; // Monthly interest rate
+        const loanTerm = parseFloat(document.getElementById('loanTerm').value) * 12; // Total number of payments
+
+        // Calculate monthly mortgage payment
+        const monthlyPayment = (loanAmount * interestRate * Math.pow(1 + interestRate, loanTerm)) / (Math.pow(1 + interestRate, loanTerm) - 1);
+
+        // Display the result
+        document.getElementById('mortgageResult').innerHTML = `<strong>Monthly Mortgage Payment:</strong> $${monthlyPayment.toFixed(2)}`;
+    }
+
+    // Mileage Calculator Function
+    function calculateMileage() {
+        const distance = parseFloat(document.getElementById('distance').value);
+        const fuelEfficiency = parseFloat(document.getElementById('fuel').value);
+
+        // Calculate mileage
+        const mileage = distance / fuelEfficiency;
+
+        // Display the result
+        document.getElementById('mileageResult').innerHTML = `<strong>Mileage:</strong> ${mileage.toFixed(2)} gallons`;
+    }
+</script>
+
+
+		
+		
+			
+
+
+
+			
+			
+		
+	
+	
+	<!-- Use the footer area to add webpage footer content	-->
+	<footer>
+        <div class="copyright">
+            <p>&copy; Copyright 2023. All rights reserved.</p>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com" target="_blank"><img src="img/facebook-logo.png" alt="black and white Facebook logo"></a>
+            <a href="https://twitter.com" target="_blank"><img src="img/twitter-logo.png" alt="black and white Twitter logo"></a>
+            <!-- Add the icons for Discord, LinkedIn, and Instagram -->
+            <a href="https://discord.com" target="_blank"><img src="img/discord icon.jpg" alt="Discord icon"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="img/linkedIn icon.jpg" alt="LinkedIn icon"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="img/insta image.jpg" alt="Instagram icon"></a>
+        </div>
+    </footer>
+
+	
+	</div>
+</body>
+</html>
+
