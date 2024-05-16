@@ -137,7 +137,48 @@
 		
 			
 
+<div id="order-invoice" class="container">
+    <h2>ORDER FORM</h2>
+    <form id="order-form" class="formi">
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" placeholder="Enter item name" required><br>
 
+        <label for="itemPrice">Item Price ($):</label>
+        <input type="number" id="itemPrice" placeholder="Enter item price" required><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" placeholder="Enter quantity" required><br>
+
+        <button type="button" onclick="generateInvoice()">Generate Invoice</button>
+    </form>
+
+    <div id="invoice" style="display: none;" class="formi">
+        <h2>INVOICE</h2>
+        <div id="invoiceDetails"></div>
+    </div>
+</div>
+
+
+		<script>// Function to generate invoice
+function generateInvoice() {
+    const itemName = document.getElementById('itemName').value;
+    const itemPrice = parseFloat(document.getElementById('itemPrice').value);
+    const quantity = parseFloat(document.getElementById('quantity').value);
+
+    const totalPrice = itemPrice * quantity;
+
+    // Display the invoice
+    const invoiceDetails = `
+        <p><strong>Item Name:</strong> ${itemName}</p>
+        <p><strong>Item Price:</strong> $${itemPrice.toFixed(2)}</p>
+        <p><strong>Quantity:</strong> ${quantity}</p>
+        <p><strong>Total Price:</strong> $${totalPrice.toFixed(2)}</p>
+    `;
+
+    document.getElementById('invoiceDetails').innerHTML = invoiceDetails;
+    document.getElementById('invoice').style.display = 'block';
+}
+</script>
 
 			
 			
