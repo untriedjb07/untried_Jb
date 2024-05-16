@@ -819,58 +819,69 @@ footer, .fo{
 }
 
 /* Style rules for invoice */
-#invoice {
+#bill {
     background: #fff;
     padding: 20px;
-    border: 1px solid #ccc; /* Add border */
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    margin-bottom: 20px;
     max-width: 600px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the invoice */
+    margin: 0 auto; /* Center the bill */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
-#invoice h2 {
+#bill h2 {
     text-align: center;
     color: #333;
     margin-bottom: 20px; /* Add some space below the heading */
-    font-family: Arial, sans-serif; /* Use a common sans-serif font */
 }
 
-.invoice-details {
+.bill-details {
     margin-bottom: 20px; /* Add space between details and total */
 }
 
-.invoice-details label {
-    display: block;
-    width: 100%;
+.bill-details label {
+    display: inline-block;
+    width: 30%;
     font-weight: bold;
-    font-family: Arial, sans-serif; /* Use a common sans-serif font */
-    margin-bottom: 5px; /* Add space between label and value */
 }
 
-.invoice-details span {
+.bill-details span {
     font-weight: normal;
     margin-left: 10px; /* Add space between label and value */
-    font-family: Arial, sans-serif; /* Use a common sans-serif font */
+    display: inline-block;
 }
 
-.invoice-total {
+.bill-total {
     text-align: center;
     margin-top: 20px;
     border-top: 2px solid #333; /* Add a border above the total */
     padding-top: 10px; /* Add space above the total */
 }
 
-.invoice-total label {
+.bill-total label {
     font-weight: bold;
-    font-family: Arial, sans-serif; /* Use a common sans-serif font */
 }
 
-.invoice-total span {
+.bill-total span {
     font-weight: bold;
     color: #4CAF50;
-    font-family: Arial, sans-serif; /* Use a common sans-serif font */
 }
+
+/* Company logo */
+.company-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.company-logo img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to the image */
+}
+
 
 
 
