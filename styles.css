@@ -714,6 +714,163 @@ footer, .fo{
     border-radius: 50%; /* Make it round */
 }
 
+/* Style rules for order form */
+
+
+
+/* Container style */
+#order-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Header style */
+#order-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Form field label style */
+#order-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input field style */
+#order-container input[type="text"],
+#order-container input[type="number"],
+#order-container select {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Submit button style */
+#order-container button {
+    width: 70%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 40px;
+}
+
+/* Hover effect for submit button */
+#order-container button:hover {
+    background-color: #45a049;
+}
+
+#order-form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#order-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#order-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+#order-form input[type="text"],
+#order-form input[type="number"],
+#order-form select {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#order-form button {
+    width: 70%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 40px;
+}
+
+#order-form button:hover {
+    background-color: #45a049;
+}
+
+/* Style rules for invoice */
+#invoice {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    max-width: 600px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the invoice */
+}
+
+#invoice h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; /* Add some space below the heading */
+    font-family: Arial, sans-serif; /* Use a common sans-serif font */
+}
+
+.invoice-details {
+    margin-bottom: 20px; /* Add space between details and total */
+}
+
+.invoice-details label {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Use a common sans-serif font */
+    margin-bottom: 5px; /* Add space between label and value */
+}
+
+.invoice-details span {
+    font-weight: normal;
+    margin-left: 10px; /* Add space between label and value */
+    font-family: Arial, sans-serif; /* Use a common sans-serif font */
+}
+
+.invoice-total {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2px solid #333; /* Add a border above the total */
+    padding-top: 10px; /* Add space above the total */
+}
+
+.invoice-total label {
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Use a common sans-serif font */
+}
+
+.invoice-total span {
+    font-weight: bold;
+    color: #4CAF50;
+    font-family: Arial, sans-serif; /* Use a common sans-serif font */
+}
 
 
 
