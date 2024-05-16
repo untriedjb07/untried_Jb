@@ -149,35 +149,63 @@
         <label for="quantity">Quantity:</label>
         <input type="number" id="quantity" placeholder="Enter quantity" required><br>
 
-        <button type="button" onclick="generateInvoice()">Generate Invoice</button>
+        <button type="button" onclick="generateBill()">Generate Bill</button>
     </form>
 
-    <div id="invoice" style="display: none;" class="formi">
-        <h2>INVOICE</h2>
-        <div id="invoiceDetails"></div>
+    <div id="bill" style="display: none;" class="formi">
+        <h2>BILL DETAILS</h2>
+		<!-- Company image section -->
+        <div class="company-logo">
+            <img src="img/cub.png" alt="Company Logo">
+        </div>
+        <div id="billDetails"></div>
+        
+        
     </div>
 </div>
 
 
-		<script>// Function to generate invoice
-function generateInvoice() {
+
+
+		<script>// Function to generate bill
+function generateBill() {
+    const companyName = "DIGITAL ODDYSEY";
+    const orderNumber = generateOrderNumber();
     const itemName = document.getElementById('itemName').value;
     const itemPrice = parseFloat(document.getElementById('itemPrice').value);
     const quantity = parseFloat(document.getElementById('quantity').value);
-
     const totalPrice = itemPrice * quantity;
+    const dateTime = getCurrentDateTime();
 
-    // Display the invoice
-    const invoiceDetails = `
+    // Display the bill
+    const billDetails = `
+        <p><strong>Company Name:</strong> ${companyName}</p>
+        <p><strong>Order Number:</strong> ${orderNumber}</p>
         <p><strong>Item Name:</strong> ${itemName}</p>
         <p><strong>Item Price:</strong> $${itemPrice.toFixed(2)}</p>
         <p><strong>Quantity:</strong> ${quantity}</p>
         <p><strong>Total Price:</strong> $${totalPrice.toFixed(2)}</p>
+        <p><strong>Date and Time:</strong> ${dateTime}</p>
     `;
 
-    document.getElementById('invoiceDetails').innerHTML = invoiceDetails;
-    document.getElementById('invoice').style.display = 'block';
+    document.getElementById('billDetails').innerHTML = billDetails;
+    document.getElementById('bill').style.display = 'block';
 }
+
+// Function to generate a unique order number (example implementation)
+function generateOrderNumber() {
+    // Generate a random number or use a specific pattern/format
+    return "ORD-" + Math.floor(Math.random() * 10000);
+}
+
+// Function to get current date and time
+function getCurrentDateTime() {
+    const now = new Date();
+    const date = now.toLocaleDateString();
+    const time = now.toLocaleTimeString();
+    return `${date} ${time}`;
+}
+
 </script>
 
 			
@@ -204,4 +232,5 @@ function generateInvoice() {
 	</div>
 </body>
 </html>
+
 
