@@ -319,6 +319,10 @@ article:nth-of-type(2) {
     color: white;
 }
 
+.social-box.discord:hover p {
+    color: white;
+}
+
 
 /* Style rule for the link in the Email Me section */
 .social-box a {
