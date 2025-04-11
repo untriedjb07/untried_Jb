@@ -316,7 +316,7 @@ article:nth-of-type(2) {
 
 /* Hover styles for h4 text */
 .social-box:hover h4 {
-    color: black;
+    color: white;
 }
 
 .social-box.discord:hover p {
